@@ -34,7 +34,6 @@ export function EditorSidebar({
   const handleDeleteDocument = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
 
-    // Find the document name before deletion for the toast message
     const docToDelete = documents.find(doc => doc.id === id);
     const docName = docToDelete?.name || "Document";
 
