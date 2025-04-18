@@ -149,12 +149,12 @@ export default function EditorPage() {
     setActiveDocument(updatedDoc);
     setIsEdited(false);
     setLastSaveTimestamp(Date.now());
-    
-    toast({
+
+    /* toast({
       title: "Document saved",
       description: `"${documentName}" has been saved`,
       variant: "default",
-    });
+    }); */
   };
 
   const handleExport = () => {
@@ -169,7 +169,7 @@ export default function EditorPage() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    
+
     toast({
       title: "Document exported",
       description: `"${documentName}.md" has been downloaded`,
@@ -190,7 +190,7 @@ export default function EditorPage() {
     if (isMobile) {
       setShowSidebar(false);
     }
-    
+
     toast({
       title: "Document opened",
       description: `"${doc.name}" is ready to edit`,
@@ -214,7 +214,7 @@ export default function EditorPage() {
     if (isMobile) {
       setShowSidebar(false);
     }
-    
+
     toast({
       title: "New document created",
       description: "Start typing to begin your new document",
