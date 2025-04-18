@@ -289,9 +289,11 @@ export default function EditorPage() {
                 <Download className="h-5 w-5" />
               </Button>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <KeyboardShortcutsModal />
-            </motion.div>
+            {!isMobile && (
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <KeyboardShortcutsModal />
+              </motion.div>
+            )}
             <div className="px-1" />
             <ThemeToggle />
           </div>
